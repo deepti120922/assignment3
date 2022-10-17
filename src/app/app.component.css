@@ -1,0 +1,20 @@
+.mat-card{
+    color:black;
+    background-color : lightblue;
+    font-size: large;
+    margin: 10px;
+}
+.example-button-row {
+    display: table-cell;
+    width: 490px;
+  }
+.basic-form{
+    margin: 10px;
+    padding: 10px;
+    font-size: large;
+}
+.p.small{
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-bottom: 1rem;
+}

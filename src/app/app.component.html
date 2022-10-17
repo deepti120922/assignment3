@@ -1,0 +1,237 @@
+<h3>{{title}}</h3>
+<div class="container">
+  <div class="col-md-12">
+    <mat-card>Basic Details</mat-card>
+    <form class="basic-form" [formGroup]="basicForm" (ngSubmit)="loginForm()">
+      <div class="row">
+        <div class="col-md-4">
+          <mat-form-field class="col-md-12">
+            <mat-label>First Name </mat-label>
+            <input matInput placeholder="First Name" formControlName="fname" >
+            </mat-form-field>
+        </div>
+        <div class="col-md-4">
+          <mat-form-field class="col-md-12">
+            <mat-label>Middle Name </mat-label>
+            <input matInput placeholder="Middle Name" formControlName="mname">
+          </mat-form-field>
+        </div>
+        <div class="col-md-4">
+        <mat-form-field class="col-md-12">
+            <mat-label>Last Name </mat-label>
+            <input matInput placeholder="Last Name" formControlName="lname">
+        </mat-form-field>
+      </div>
+</div>
+<div class="row">
+<div class="col-md-2">
+  <mat-form-field class="col-md-12">
+    <mat-label>Relation with Applicant </mat-label>
+    <select matNativeControl formControlName="relation">
+      <option value="Self">Self</option>
+      <option value="Father">Father</option>
+    </select>
+  </mat-form-field>
+</div>
+<div class="col-md-2">
+  <mat-form-field class="col-md-12">
+    <mat-label>Gender </mat-label>
+    <select matNativeControl formControlName="gender">
+      <option value="Male">Male</option>
+      <option value="Female">Female</option>
+    </select>
+  </mat-form-field>
+</div>
+<div class="col-md-2">
+  <mat-form-field class="col-md-12">
+    <mat-label>DOB</mat-label>
+    <input matInput [matDatepicker]="picker" formControlName="dob" #iddob>
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>
+</div>
+<div class="col-md-2">
+  <mat-form-field class="col-md-12">
+    <mat-label>Age</mat-label>
+    <input matInput placeholder="Age" formControlName="age" 
+    onkeypress='return event.charCode >= 48 && event.charCode <= 57'>
+  </mat-form-field>
+  </div>
+  <div class="col-md-4">
+  <mat-form-field class="col-md-12">
+    <mat-label>DOB Proof </mat-label>
+    <select matNativeControl formControlName="dobProof">
+      <option value="Adhaar">Adhaar</option>
+      <option value="PAN">PAN Card</option>
+      <option value="Driving License">Driving License</option>
+      <option value="Voter Card">Voter Id Card</option>
+    </select>
+  </mat-form-field>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-2">
+    <mat-form-field class="col-md-12">
+    <mat-label>Nationality </mat-label>
+    <select matNativeControl formControlName="nationality">
+      <option value="Indian">Indian</option>
+      <option value="Others">Others</option>
+    </select>
+  </mat-form-field>
+</div>
+<div class="col-md-2">
+  <mat-form-field class="col-md-12">
+    <mat-label>Religion</mat-label>
+    <select matNativeControl formControlName="religion">
+      <option value="Hindu">Hindu</option>
+      <option value="Muslim">Muslim</option>
+      <option value="Christian">Christian</option>
+      <option value="Sikh">Sikh</option>
+    </select>
+  </mat-form-field>
+</div>
+  <div class="col-md-2">
+  <mat-form-field class="col-md-12">
+    <mat-label>Caste </mat-label>
+    <select matNativeControl formControlName="caste">
+      <option value="General">General</option>
+      <option value="OBC">OBC</option>
+      <option value="SC/ST">SC/ST</option>
+    </select>
+  </mat-form-field>
+  </div>
+  <div class="col-md-2">
+    <mat-form-field class="col-md-12">
+    <mat-label>Bureau Deviation </mat-label>
+    <select matNativeControl formControlName="bureau">
+      <option value="Yes">Yes</option>
+      <option value="No">No</option>
+    </select>
+  </mat-form-field>
+  </div>
+  <div class="col-md-4">
+    <mat-form-field class="col-md-12">
+    <mat-label>Income Considered </mat-label>
+    <select matNativeControl formControlName="income">
+      <option value="Yes">Yes</option>
+      <option value="No">No</option>
+    </select>
+  </mat-form-field>
+</div>
+</div>
+<div class="row">
+<div class="col-md-2">
+  <mat-form-field class="col-md-12">
+    <mat-label>Alternate Contact</mat-label>
+    <input matInput placeholder="Mobile" formControlName="contact"  
+    onkeypress='return event.charCode >= 48 && event.charCode <= 57'>
+  </mat-form-field>
+</div>
+
+<div class="col-md-2">
+  <mat-form-field class="col-md-12">
+    <mat-label>Marital Status </mat-label>
+    <select matNativeControl formControlName="marital">
+      <option value="Single">Single</option>
+      <option value="Married">Married</option>
+    </select>
+  </mat-form-field>
+</div>
+<div class="col-md-4">
+  <mat-form-field class="col-md-12">
+    <mat-label>Qualification</mat-label>
+    <select matNativeControl formControlName="qualification">
+      <option value="Graduate">Graduate</option>
+      <option value="Post Graduate">Post Graduate</option>
+    </select>
+  </mat-form-field>
+</div>
+<div class="col-md-4">
+  <mat-form-field class="col-md-12">
+    <mat-label>Detail Qualification </mat-label>
+    <input matInput placeholder="Qualification" formControlName="detailQualification" />
+  </mat-form-field>
+</div>
+</div>
+
+<div class="row">
+<div class="col-md-4">
+  <mat-form-field class="col-md-12">
+    <mat-label>Father First Name </mat-label>
+    <input matInput placeholder="Father First Name" formControlName="ffname" />
+  </mat-form-field>
+</div>
+<div class="col-md-4">
+  <mat-form-field class="col-md-12">
+    <mat-label>Father Middle Name </mat-label>
+    <input matInput placeholder="Father Middle Name" formControlName="fmname" />
+  </mat-form-field>
+</div>
+<div class="col-md-4">
+  <mat-form-field class="col-md-12">
+    <mat-label>Father Last Name</mat-label>
+    <input matInput placeholder="Father Last Name" formControlName="flname" />
+  </mat-form-field>
+</div>
+</div>
+<div class="row">
+  <div class="col-md-4">
+    <mat-form-field class="col-md-12">
+    <mat-label>Living Standard Indicators(LSI) </mat-label>
+    <select matNativeControl formControlName="lsi">
+      <option value="Yes">Yes</option>
+      <option value="No">No</option>
+    </select>
+  </mat-form-field>
+  </div>
+
+  <div class="col-md-2">
+  <mat-form-field class="col-md-12">
+    <mat-label>Negative/Caution Profile</mat-label>
+    <select matNativeControl formControlName="negativeProfile">
+      <option value="Yes">Yes</option>
+      <option value="No">No</option>
+    </select>
+  </mat-form-field>
+  </div>
+
+ <div class="col-md-2">
+  <mat-form-field class="col-md-12">
+    <mat-label>No. of Family Members </mat-label>
+    <input matInput placeholder="Family Members" formControlName="noOfFamilyMembers" 
+    onkeypress='return event.charCode >= 48 && event.charCode <= 57' />
+  </mat-form-field>
+ </div>
+
+ <div class="col-md-4">
+  <mat-form-field class="col-md-12">
+    <mat-label>No. of Earning Members </mat-label>
+    <input matInput placeholder="Earning Members" formControlName="noOfEarningMembers" 
+    onkeypress='return event.charCode >= 48 && event.charCode <= 57'/>
+  </mat-form-field>
+</div>
+</div>
+<small>* Fields are mandatory.</small>
+<br><br>
+<div class="example-button-row">
+  <button mat-raised-button color="primary" 
+  (click)="open(content)"
+  [disabled]="basicForm.invalid">Submit</button>
+  
+</div>
+</form>
+</div>
+</div>
+
+<ng-template #content let-c="close" let-d="dismiss">
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">Confirmation</h4>
+    <button type="button" class="btn-close" aria-label="Close" (click)="d('Cross click')"></button>
+  </div>
+  <div class="modal-body">
+    <p>Data Submitted Successfully.</p>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark" (click)="c('Save click')">Ok</button>
+  </div>
+</ng-template>
